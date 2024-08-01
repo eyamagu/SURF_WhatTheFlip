@@ -2,7 +2,7 @@
 #script to run the container and copy the script above to inside the scripts
 
 #path to where you are storing the other files
-path='/root/jupyter-kernels/FPC2'
+path='/root/jupyter-kernels/FPC2';
 
 module load apptainer
 
