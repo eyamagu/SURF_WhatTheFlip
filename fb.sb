@@ -1,0 +1,15 @@
+#!/bin/sh
+
+#SBATCH --job-name=bitflip         # Name of the job
+#SBATCH --output=output_%j.log     # Standard output and error log (%j will be replaced by job ID)
+#SBATCH --error=error_%j.log       # Error log
+#SBATCH --ntasks=1                # Number of tasks (use more if your script is parallelized)
+#SBATCH --cpus-per-task=1         # Number of CPU cores per task
+#SBATCH --mem=8G                   # Memory per node
+
+# Load any necessary modules
+# module load some_module
+module load apptainer
+
+# Run your script
+./run.sh
