@@ -13,9 +13,9 @@ do
 	for m in {0..19};
 	do
 		#config change value in config to set where to bit flip and which value in the matrix
-    sed -i '15s/.*/const int INT_BITS_FD = '$FD_INT';/' include/config.hpp
-    sed -i '16s/.*/const int FRAC_BITS_FD = '$FD_FRAC';/' include/config.hp
-    sed -i '20s/.*/const int BIT_FLIP = '$m';/' include/config.hpp
+    		sed -i '15s/.*/const int INT_BITS_FD = '$FD_INT';/' include/config.hpp
+    		sed -i '16s/.*/const int FRAC_BITS_FD = '$FD_FRAC';/' include/config.hp
+    		sed -i '20s/.*/const int BIT_FLIP = '$m';/' include/config.hpp
 		sed -i '21s/.*/const int MATRIX_VAL = '$n';/' include/config.hpp
 		./scripts.sh panda
 		#save data
